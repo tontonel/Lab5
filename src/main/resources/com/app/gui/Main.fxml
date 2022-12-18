@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="681.0" prefWidth="765.0" spacing="20.0" style="-fx-background-color: F1DABF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <VBox prefHeight="714.0" prefWidth="762.0" style="-fx-border-color: black;">
+         <children>
+            <HBox prefHeight="325.0" prefWidth="726.0">
+               <children>
+                  <VBox prefHeight="324.0" prefWidth="291.0" style="-fx-background-color: fffbff; -fx-border-color: black; -fx-border-width: 3;">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Reports">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="255.0" prefWidth="287.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="44.0" prefWidth="144.0">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.columnIndex="1">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.rowIndex="2">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.rowIndex="3">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <Button id="allbtn" mnemonicParsing="false" stylesheets="@style.css" text="Button" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="324.0" prefWidth="438.0">
+                     <children>
+                        <SplitPane dividerPositions="0.4958715596330275" prefHeight="323.0" prefWidth="452.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="194.0" style="-fx-background-color: fffbff; -fx-border-color: black; -fx-border-width: 3;">
+                                 <children>
+                                    <VBox layoutX="22.0" layoutY="6.0" prefHeight="312.0" prefWidth="174.0" style="-fx-background-color: fffbff;">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="181.0">
+                                             <children>
+                                                <Label text="Patient">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <Label alignment="TOP_LEFT" text="Name">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="nameInput" styleClass=".text-field" stylesheets="@style.css">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label text="Surename">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="surnameInput" styleClass="text-field" stylesheets="@style.css">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label text="ID">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="patientIDInput" styleClass="text-field" stylesheets="@style.css">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="217.0" style="-fx-background-color: fffbff; -fx-border-color: black; -fx-border-width: 3;">
+                                 <children>
+                                    <VBox layoutX="15.0" layoutY="1.0" prefHeight="319.0" prefWidth="186.0">
+                                       <children>
+                                          <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="175.0">
+                                             <children>
+                                                <Label text="Appointment">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <Label text="Date">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <DatePicker id="dateInput" fx:id="dateInput" styleClass="date-picker" stylesheets="@style.css">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin>
+                                          </DatePicker>
+                                          <ComboBox fx:id="selectHours" prefWidth="150.0" promptText="Select Hour" />
+                                          <Label text="ID">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="appointmentIDInput" prefHeight="26.0" prefWidth="194.0" styleClass="text-field" stylesheets="@style.css">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <GridPane alignment="TOP_RIGHT" prefHeight="111.0" prefWidth="167.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="121.39999809265137" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button id="allbtn" fx:id="addAppointmentButton" mnemonicParsing="false" onAction="#handleAddAppointment" prefHeight="24.0" prefWidth="175.0" styleClass="a" stylesheets="@style.css" text="Add Appointment" />
+                                                <Button id="allbtn" fx:id="deleteAppointmentButton" mnemonicParsing="false" onAction="#handleDeleteAppointment" prefHeight="26.0" prefWidth="176.0" stylesheets="@style.css" text="Delete Appointment" GridPane.rowIndex="1" />
+                                                <Button id="allbtn" fx:id="UpdateAppointmentButton" mnemonicParsing="false" onAction="#handleUpdateAppointment" prefHeight="6.0" prefWidth="175.0" stylesheets="@style.css" text="Update Appointment" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="321.0" prefWidth="728.0">
+               <children>
+                  <ListView id="patientsList" fx:id="patientsList" onMouseClicked="#handlePatientListClick" prefHeight="320.0" prefWidth="366.0" style="-fx-background-color: fffbff; -fx-border-width: 3; -fx-border-color: black;" stylesheets="@style.css" />
+                  <ListView id="AppointmentList" fx:id="AppointmentList" prefHeight="320.0" prefWidth="366.0" style="-fx-background-color: fffbff; -fx-border-width: 3; -fx-border-color: black;" styleClass="#allbtn" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
