@@ -2,10 +2,7 @@ package com.app.gui;
 
 import Domain.Appointment;
 import Domain.Patient;
-import Persistancy.PatientsBinaryRepository;
-import Persistancy.PatientsFileRepository;
-import Persistancy.PatientsRepository;
-import Persistancy.Repository;
+import Persistancy.*;
 import Service.Service;
 import Utils.DateFormatter;
 
@@ -56,21 +53,35 @@ public class Main extends Application {
         Repository repo = null;
 
         Properties properties = new Properties();
-        try(InputStream is = new FileInputStream("src/main/java/settings.properties")) // try-with-resources
+        try(InputStream is = new FileInputStream("D:\\JavaLabs\\LabGUI\\GUI\\src\\main\\java\\settings.properties")) // try-with-resources
         {
             properties.load(is);
-            if(properties.getProperty("MemoryRepository").equals("text"))
-                return new PatientsFileRepository("java/text.txt");
+            System.out.println(properties.getProperty("Repository"));
+            if(properties.getProperty("Repository").equals("memory")) {
+                System.out.println("Using memory repository");
+                if(properties.getProperty("MemoryRepository").equals("text"))
+                    return new PatientsFileRepository("D:\\JavaLabs\\LabGUI\\GUI\\src\\main\\java\\text.txt");
 
-            else if(properties.getProperty("MemoryRepository").equals("binary"))
-                return new PatientsBinaryRepository("java/binary.bin");
+                else if(properties.getProperty("MemoryRepository").equals("binary")) {
+                    System.out.println("here");
+                    return new PatientsBinaryRepository("D:\\JavaLabs\\LabGUI\\GUI\\src\\main\\java\\binary.bin");
+                }
 
+            }
+            else if(properties.getProperty("Repository").equals("database")) {
+                return new PatientsDBRepository();
+            }
+            else {
+                return defaultRepository();
+            }
         } catch (FileNotFoundException e) {
             printErr(e);
         } catch (IOException e) {
             printErr(e);
         } catch (NoIdenticEntitiesException e) {
             printErr(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         return defaultRepository();
     }

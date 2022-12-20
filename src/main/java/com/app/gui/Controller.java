@@ -25,7 +25,7 @@ public class Controller implements Initializable {
 
     Service patientService;
 
-    private ObservableList<String> hours = FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+    private ObservableList<String> hours = FXCollections.observableArrayList("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12",
                                                                                     "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24");
 
     private ObservableList<Patient> patients = FXCollections.observableArrayList();
@@ -127,7 +127,7 @@ public class Controller implements Initializable {
                 String date = dateInput.getValue().toString();
                 String[] elems = date.split("-");
                 Appointment appointment = new Appointment(Integer.parseInt(appointmentIDInput.getText()), new DateFormatter(elems[0] + " " + elems[1] + " "
-                        + selectHours.getSelectionModel().getSelectedItem() + " " + elems[2]).getDate());
+                        + selectHours.getSelectionModel().getSelectedItem()).getDate());
                 patientService.updatePatient(AppointmentList.getSelectionModel().getSelectedItem().getId(), appointment);
                 appointments.remove(AppointmentList.getSelectionModel().getSelectedItem());
                 appointments.add(appointment);
